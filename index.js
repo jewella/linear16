@@ -19,9 +19,8 @@ module.exports = (filePathIn, filePathOut) => new Promise((resolve, reject) => {
                     '-f s16le',
                     '-acodec pcm_s16le',
                     '-vn',
-                    '-ac 1',
-                    '-ar 16k',
-                    '-map_metadata -1'
+                    '-ac 2',
+                    '-ar 8k',
                 ])
                 .save(filePathOut)
                 .on('end', () => resolve(filePathOut));
